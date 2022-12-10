@@ -13,7 +13,7 @@ const Home = () => {
 		const fetchMovie = async () => {
 			try {
 				const response = await fetch(
-					`https://www.omdbapi.com/?t=${searchText}&apikey=${process.env.bda20d11}`
+					`https://www.omdbapi.com/?t=${searchText}&apikey=${process.env.REACT_APP_API_KEY}`
 				);
 				const data = await response.json();
 				setMovie(data);
